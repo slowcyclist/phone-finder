@@ -17,8 +17,8 @@ In the worst case, your phone was stollen...
     * Switch the phone to non-silent
     * Performs gps localization and return the coordinates to the caller (this is usefull if you loose your phone outdoors...)
     * Execute an arbitary non-interactive shell command and send the result back via sms
-    * Establish an ssh link to a predefined host (automatically with key) with reverse tunnel in order to be able to reach the phone's console
-    * Extensible to do anything else you want (and know how to do it): record sound...
+    * Have the phone ssh to a predefined host (automatically with key) with a reverse tunnel. From this server you can then ssh to the phone and use it's terminal interactively. OTOH if your carrier delivers IPV6 addresses, you may be able to directly ssh into the phone (not implemented yet - my carrier is still in the stone age of internet).
+    * Extensible to do anything else you want (and know how to do it): record sound... This could be geared up to make a near replacement of the [SMSCON application that existed on the N900](https://wiki.maemo.org/SMSCON)
 
 * Watch for incoming calls from a set of predefined numbers
   If the phone is in silent mode and the call is not answered, it (optionally) sends an sms to the caller to warn the phone is silent.
@@ -40,4 +40,4 @@ Don't forget to test all the use cases to ensure they'll work as expected when t
 ## Technical details
 All this is written in python which means it is relatively easy to tweak the behavior of the program or expand it.
 
-TODO  : handle dual-sims
+TODO  : handle dual-sims, IPV6
