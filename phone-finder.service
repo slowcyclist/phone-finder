@@ -1,0 +1,10 @@
+[Unit]
+Description=start an sms-listening script 
+
+[Service]
+Type=simple
+ExecStart=/home/nemo/phone-finder/phone-finder.py
+Restart=on-failure
+
+[Install]
+WantedBy=user-session.target
